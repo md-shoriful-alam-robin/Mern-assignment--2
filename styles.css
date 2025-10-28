@@ -1,0 +1,301 @@
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  width: 1340px;
+  height: auto;
+  margin: 1em;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 1177px;
+  height: 44px;
+
+  background: white;
+  top: 32px;
+  left: 142px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 500;
+  color: ##06c167;
+  padding: 1em;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #0da652;
+}
+
+.logo {
+  width: 120px;
+  height: 39px;
+}
+.robin {
+  position: absolute;
+  left: 700px;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 1440px;
+  height: 798px;
+  margin: 0.5rem auto;
+  overflow: hidden;
+  background-color: #f3fcf7;
+}
+
+.hero-left {
+  max-width: 533px;
+}
+
+.hero-left h1 {
+  width: 533px;
+  height: 182px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  width: 533px;
+  height: 46px;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn img {
+  width: 200px;
+  height: 68px;
+}
+
+/* Brand Section */
+.brand img {
+  width: 570px;
+  height: 35.84px;
+  color: #394149;
+}
+
+/* Image Group */
+.image-group {
+  position: relative;
+  top: -350px;
+  left: 200px;
+}
+
+.image-group img {
+  position: absolute;
+}
+
+.main-img {
+  width: 468px;
+  height: 600px;
+  top: 0;
+  left: 0;
+}
+
+.good {
+  width: 230px;
+  height: 53px;
+  top: 200px;
+  left: 300px;
+  z-index: 10;
+}
+
+.rate {
+  width: 230px;
+  height: 53px;
+  top: 300px;
+  left: -100px;
+}
+
+.polc {
+  width: 174px;
+  height: 174px;
+  top: 400px;
+  left: 350px;
+}
+
+/* Features */
+.features img {
+  width: 1270px;
+}
+
+/* Our Benefit */
+.our-benefit {
+  display: flex;
+  gap: 2rem;
+  margin: 4rem auto;
+}
+
+.vege img {
+  width: 100%;
+  height: auto;
+}
+
+.benefit-text {
+  max-width: 537px;
+}
+
+.small-text {
+  font-weight: 500;
+  font-size: 15px;
+  color: #1d1d1f;
+  margin-bottom: 1rem;
+}
+
+.highlight-text {
+  font-size: 60px;
+  font-weight: 500px;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  width: 500px;
+}
+
+.benefit-list {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 5rem 0 0 1em;
+}
+
+/* Our Star */
+.our-star {
+  width: 1230px;
+  height: 608px;
+  border: 1px;
+  color: #f3fcf7;
+  border-color: #707070;
+}
+
+/*Our Features*/
+.our-feature {
+  width: 1170px;
+  height: 766px;
+  border: 1.5px;
+  color: #f3fcf7;
+  border-color: #06c167;
+}
+
+/*Our Product*/
+.our-feature {
+  width: 1170px;
+  height: 619px;
+  border: 2px;
+  color: #06c167;
+  border-color: #06c167;
+}
+
+/*Veggie Foods*/
+.Veggie-Foods {
+  width: 1170px;
+  height: 459px;
+  border: 1px;
+  color: #06c167;
+  border-color: #707070;
+}
+
+/*Footer*/
+.fot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1440px;
+  height: 433px;
+  background-color: #f3fcf7;
+}
+
+.logo-2 img {
+  width: 284px;
+  height: 208.98px;
+  color: #06c167;
+}
+
+.about img {
+  width: 107px;
+  height: 194px;
+  color: #1d1d1f;
+}
+
+.company img {
+  width: 110px;
+  height: 194px;
+}
+
+.touch img {
+  width: 338px;
+  height: 195px;
+  color: #06c167;
+}
+
+.author {
+  align-items: center;
+  text-align: center;
+}
+.author a {
+  text-decoration: none;
+  color: #06c167;
+}
+
+.author a:hover {
+  color: #0da652;
+}
+
+.author p {
+  margin: 0;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .robin {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+  }
+
+  .highlight-text {
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .hero-btn img {
+    width: 150px;
+    height: auto;
+  }
+
+  .brand img {
+    width: 90%;
+  }
+
+  .benefit-list {
+    padding: 1rem;
+  }
+}
