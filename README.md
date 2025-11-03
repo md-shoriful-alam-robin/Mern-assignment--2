@@ -23,4 +23,9 @@ This project showcases delightful UI, smooth layout, and attention to detail usi
 
 ---
 
+  Assignment: 02
+Name: MD Shoriful Alam Robin
+Email: typicalrobin@gmail.com
+Live: https://robin-css-html-assignment-2.netlify.app/
+
 ## 📂 Folder Structure
