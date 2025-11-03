@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <script src="App.js"></script>
+
     <!-- Navbar -->
-    <header>
+    <section class="hero-section">
+      <!-- Navbar moved inside hero-section -->
       <nav class="navbar">
         <img src="images/logo (1).png" alt="Foodies Logo" class="logo" />
-        <div class="robin">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Service Us</a>
-          <a href="#">Our Company</a>
-          <a href="#">Pages</a>
-        </div>
+        <button class="hamburger" id="hamburger-btn">
+          <img src="images/hamburger-icon.png" alt="Menu" />
+        </button>
+        <ul class="nev-menu">
+          <li><a class="nev-item-1" href="#">Home</a></li>
+          <li><a class="nev-item-2" href="#">About Us</a></li>
+          <li><a class="nev-item-3" href="#">Service Us</a></li>
+          <li><a class="nev-item-4" href="#">Our Company</a></li>
+          <li><a class="nev-item-5" href="#">Pages</a></li>
+        </ul>
       </nav>
-    </header>
-    <!-- Hero Section -->
-    <section class="hero-section">
+
+      <!-- Hero content -->
       <div class="hero-left">
         <h1>We're Serious For Food.</h1>
         <p>
@@ -31,10 +36,13 @@
         <div class="hero-btn">
           <img src="images/Button.png" alt="Get Started" />
         </div>
-        <div class="brand">
-          <img src="images/Brand Logo.png" alt="Brand logo" />
+        <div class="brand-group-img">
+          <img class="group-1" src="images/Group 1.png" alt="Brand logo" />
+          <img class="group-2" src="images/Group 2.png" alt="Brand logo" />
+          <img class="group-3" src="images/Group 3.png" alt="Brand logo" />
         </div>
       </div>
+
       <div class="image-group">
         <img class="main-img" src="images/Place Your Image (1).png" alt="" />
         <img class="good" src="images/Good Quality Product.png" alt="" />
@@ -44,47 +52,92 @@
     </section>
 
     <!-- Features -->
-    <div class="features">
-      <img src="images/Features.png" alt="Feature" />
+    <div class="features-group-img">
+      <img class="shipping" src="images/Free Shipping.png" alt="order" />
+      <img class="quick" src="images/Quick Payment.png" alt="quick" />
+      <img class="special" src="images/Special Promo.png" alt="special" />
+      <img class="support" src="images/7 Support.png" alt="support" />
     </div>
 
     <!-- Our Benefit Section -->
     <section class="our-benefit">
-      <div class="vege">
-        <img src="images/images.png" alt="Veggie Food" />
+      <div class="benefit-img">
+        <img class="vegeimg" src="images/images.png" alt="Veggie Food" />
       </div>
       <div class="benefit-text">
-        <p class="small-text">Our Benefit</p>
+        <h4 class="small-text">Our Benefit</h4>
         <h2 class="highlight-text">The More Healthy Food The Better</h2>
-        <p class="benefit-list">
-          ✔️ Be Alive With Veggie Food.<br />
-          ✔️ It's The Place To Be.<br />
-          ✔️ Nonstop veggie Food<br />
-          ✔️ The Best Silk Dish in Town<br />
-          ✔️ Truffles, Egg & Pumpkin spice
-        </p>
+
+        <ul class="benefit-list">
+          <img class="polca" src="images/Polcadot (1).png" alt="Polcadot" />
+          <li>✔️ Be Alive With Veggie Food.</li>
+          <li>✔️ We Provide Healthy Food</li>
+          <li>✔️ Nonstop Veggie Food</li>
+          <li>✔️ The Best Dish in Town</li>
+          <li>✔️ Truffles, Egg & Pumpkin Spice</li>
+        </ul>
       </div>
     </section>
 
     <!-- Our Stars Section -->
-    <div class="our-star">
-      <img src="images/Our Stars.png" alt="Our Stars" />
-    </div>
+
+    <section class="our-star">
+      <div class=".vasv">
+        <h6 class="ou">Our stars</h6>
+        <h2 calss="ouu">Veggie Food Goes On And Always On</h2>
+        <img src="images/1500.png" alt="1500" />
+        <img src="images/500.png" alt="500" />
+        <img src="images/400.png" alt="400" />
+        <img src="images/Button (1).png" alt="get promo" />
+      </div>
+      <div>
+        <img src="images/Images (1).png" alt="water vagetable" />
+      </div>
+    </section>
 
     <!-- Our Feature -->
-    <div class="our-feature">
-      <img src="images/Our Features.png" alt="Our Features" />
-    </div>
+    <section class="our-feature">
+      <div class="adv">
+        <h6>Our Features</h6>
+        <h2>Verity of Foods</h2>
+      </div>
+      <div class="robin">
+        <img src="images/Place Your Image (5).png" alt="Our Features1" />
+        <img src="images/Veggies Are (1).png" alt="Our Features2" />
+        <img src="images/Place Your Image (3).png" alt="Our Features3" />
+        <img src="images/shakib.png" alt="Our Features4" />
+        <img src="images/Veggie Food Groove (1).png" alt="Our Features5" />
+        <img src="images/Place Your Image (7).png" alt="Our Features6" />
+        <img src="images/That Comes.png" alt="Our Features7" />
+        <img src="images/Place Your Image (8).png" alt="Our Features8" />
+      </div>
+    </section>
 
     <!--Our Product-->
-    <div class="our-product">
-      <img src="images/Our Product.png" alt="Our Product" />
-    </div>
+    <section class="our-product">
+      <div class="pro-hd">
+        <h6>Our Product</h6>
+        <h2>Most Popular Product</h2>
+      </div>
+      <div class="again">
+        <img src="images/Summer Veganie.png" alt="Our Product-1" />
+        <img src="images/Greanie Seafood.png" alt="Our Product-2" />
+        <img src="images/Fresh Meatyus.png" alt="Our Product-3" />
+        <img src="images/Fresh Meatyus.png" alt="Our Product-4" />
+      </div>
+    </section>
 
-    <!--Veggie Foods-->
-    <div class="Veggie-Foods">
-      <img src="images/Veggie Foods_.png" alt="Veggie Foods" />
-    </div>
+    <!--ingredients-->
+    <section class="ing">
+      <div class="ing-1">
+        <h2>Veggie Foods? Ingredients You Want To Try</h2>
+        <img src="images/Button (2).png" alt="butn" />
+      </div>
+      <div class="ing-2">
+        <img src="images/Rectangle 8.png" alt="pc" />
+      </div>
+    </section>
+
     <!--Footer-->
     <footer class="fot">
       <div class="logo-2">

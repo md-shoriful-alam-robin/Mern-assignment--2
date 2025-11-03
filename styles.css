@@ -2,9 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
-  width: 1340px;
-  height: auto;
-  margin: 1em;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -14,50 +13,77 @@ body {
   color: #111111;
 }
 
-/* Navbar */
+.hero-section {
+  background-color: #f3fcf7;
+  padding: 20px 40px;
+  max-width: 1440px;
+  height: 663px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  width: 1177px;
-  height: 44px;
-
   background: white;
-  top: 32px;
-  left: 142px;
-}
-
-.navbar a {
-  text-decoration: none;
-  font-weight: 500;
-  color: ##06c167;
-  padding: 1em;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  color: #0da652;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
 .logo {
   width: 120px;
   height: 39px;
 }
-.robin {
-  position: absolute;
-  left: 700px;
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* default: hide on desktop */
 }
 
-/* Hero Section */
-.hero-section {
+.hamburger img {
+  width: 30px;
+  height: 30px;
+}
+
+.nev-menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  max-width: 1440px;
-  height: 798px;
-  margin: 0.5rem auto;
-  overflow: hidden;
-  background-color: #f3fcf7;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nev-item-1,
+.nev-item-2,
+.nev-item-3,
+.nev-item-4,
+.nev-item-5 {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000000;
+  transition: 0.3s;
+}
+
+.nev-item-1 {
+  color: #06c167;
+}
+.nev-item-1::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #06c167;
+  border-radius: 50%;
+  margin: 4px auto 0;
+}
+
+.navbar a:hover {
+  color: #04a155;
+  transform: scale(1.05);
 }
 
 .hero-left {
@@ -67,16 +93,18 @@ body {
 .hero-left h1 {
   width: 533px;
   height: 182px;
-  font-size: 3rem;
+  font-size: 3.8rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.5;
   margin-bottom: 1rem;
+  color: 1d1d1f;
+  opacity: 100%;
 }
 
 .hero-left p {
   width: 533px;
   height: 46px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
   margin-bottom: 1.5rem;
 }
@@ -84,218 +112,464 @@ body {
 .hero-btn img {
   width: 200px;
   height: 68px;
+  opacity: 100%;
 }
 
 /* Brand Section */
-.brand img {
+.brand-group-img {
+  position: absolute;
+  top: 700px;
   width: 570px;
-  height: 35.84px;
-  color: #394149;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Individual Brand Logos */
+.group-1,
+.group-2,
+.group-3 {
+  width: 190px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Image Group */
 .image-group {
   position: relative;
-  top: -350px;
-  left: 200px;
-}
-
-.image-group img {
-  position: absolute;
+  left: 850px;
+  bottom: 400px;
+  display: flex;
+  justify-content: center;
 }
 
 .main-img {
+  position: absolute;
   width: 468px;
-  height: 600px;
+  height: 634px;
   top: 0;
   left: 0;
 }
 
 .good {
+  position: absolute;
   width: 230px;
   height: 53px;
   top: 200px;
-  left: 300px;
-  z-index: 10;
+  left: 280px;
 }
 
 .rate {
+  position: absolute;
   width: 230px;
   height: 53px;
   top: 300px;
-  left: -100px;
+  left: -70px;
 }
 
 .polc {
+  position: absolute;
   width: 174px;
   height: 174px;
-  top: 400px;
-  left: 350px;
+  top: 480px;
+  left: 290px;
 }
 
 /* Features */
-.features img {
-  width: 1270px;
+
+.features-group-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1170px;
+  width: 90%;
+  height: auto;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 40px 0;
+  align-items: center;
+  margin: 100px auto 0 auto;
+  position: relative;
+}
+
+.shipping,
+.quick,
+.special,
+.support {
+  width: 200px;
+  height: auto;
+  color: #06c167;
+  border: 1px solid #f3fcf7;
+  opacity: 1;
+  text-align: center;
+  padding: 10px;
 }
 
 /* Our Benefit */
 .our-benefit {
   display: flex;
-  gap: 2rem;
-  margin: 4rem auto;
+  width: 1522px;
+  height: 608px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
-.vege img {
-  width: 100%;
-  height: auto;
+.vegeimg {
+  width: 709px;
+  height: 608px;
+  border: 1px;
+  padding: 4rem;
+  margin-top: auto;
+}
+.small-text {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: auto;
+  padding: 5rem 0 0 0;
 }
 
 .benefit-text {
-  max-width: 537px;
-}
-
-.small-text {
-  font-weight: 500;
-  font-size: 15px;
-  color: #1d1d1f;
-  margin-bottom: 1rem;
+  width: 50%;
+  display: inline-block;
 }
 
 .highlight-text {
-  font-size: 60px;
-  font-weight: 500px;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-  width: 500px;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  margin-right: 5rem;
 }
 
-.benefit-list {
-  font-size: 16px;
-  line-height: 1.5;
-  padding: 5rem 0 0 1em;
+.polca {
+  position: absolute;
+  margin-left: 300px;
 }
 
-/* Our Star */
+.benefit-list li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
 .our-star {
-  width: 1230px;
+  display: flex;
+  justify-content: center;
+  width: 1611px;
   height: 608px;
-  border: 1px;
-  color: #f3fcf7;
-  border-color: #707070;
+  margin: auto;
+}
+.vasv {
+  width: 800px;
+  height: 608px;
+  padding: 3rem;
 }
 
-/*Our Features*/
-.our-feature {
-  width: 1170px;
-  height: 766px;
-  border: 1.5px;
-  color: #f3fcf7;
-  border-color: #06c167;
+.wasv {
+  width: 708px;
+  height: 608px;
 }
 
-/*Our Product*/
 .our-feature {
-  width: 1170px;
+  width: 1540px;
+  height: 790px;
+  margin: auto;
+}
+
+.robin {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1540px;
+  height: 560px;
+  margin: auto;
+  gap: 30px;
+  row-gap: 1px;
+  column-gap: 10px;
+}
+
+.adv {
+  height: auto;
+  margin: auto;
+  font-display: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.our-product {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  width: 1532px;
   height: 619px;
-  border: 2px;
-  color: #06c167;
-  border-color: #06c167;
+  margin: auto;
+  margin-top: 200px;
 }
 
-/*Veggie Foods*/
-.Veggie-Foods {
-  width: 1170px;
+.again {
+  display: flex;
+  max-width: 1530px;
+  height: 445px;
+  margin: auto;
+  row-gap: 20px;
+  column-gap: 10px;
+  gap: 50px;
+}
+.pro-hd {
+  width: 1520px;
+  height: 150px;
+  margin: auto;
+  text-align: left;
+  font-size: 2.2rem;
+  top: 10px;
+}
+.ing {
+  position: relative;
+  width: 1545px;
   height: 459px;
-  border: 1px;
-  color: #06c167;
-  border-color: #707070;
+  margin: auto;
 }
 
-/*Footer*/
+.ing-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: #f3fcf7; /* Optional: text color */
+  font-size: 2rem;
+}
+
+.ing-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Footer Section */
 .fot {
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  width: 1440px;
-  height: 433px;
-  background-color: #f3fcf7;
+  flex-wrap: wrap;
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  border-top: 2px solid #ddd;
+  margin: auto;
 }
 
-.logo-2 img {
-  width: 284px;
-  height: 208.98px;
-  color: #06c167;
-}
-
-.about img {
-  width: 107px;
-  height: 194px;
-  color: #1d1d1f;
-}
-
-.company img {
-  width: 110px;
-  height: 194px;
-}
-
-.touch img {
-  width: 338px;
-  height: 195px;
-  color: #06c167;
-}
-
-.author {
-  align-items: center;
+.fot div {
+  margin: 10px;
   text-align: center;
 }
+
+.fot img {
+  max-width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.fot img:hover {
+  transform: scale(1.05);
+}
+
+/* Author Section */
+.author {
+  text-align: center;
+  background-color: #eaeaea;
+  padding: 20px 10px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  color: #333;
+  border-top: 1px solid #ccc;
+  margin: auto;
+}
+
 .author a {
+  color: #007bff;
   text-decoration: none;
-  color: #06c167;
+  font-weight: bold;
 }
 
 .author a:hover {
-  color: #0da652;
+  text-decoration: underline;
 }
 
 .author p {
-  margin: 0;
-  color: #555;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
 }
 
-@media (max-width: 900px) {
-  .navbar {
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN START */
+/* ========================= */
+
+/* Tablet view (up to 992px width) */
+@media (max-width: 992px) {
+  .hero-section {
     flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nev-menu {
+    gap: 15px;
+  }
+
+  .image-group {
+    position: static;
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .main-img {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .good,
+  .rate,
+  .polc {
+    display: none; /* hide floating images for clean look */
+  }
+
+  .brand-group-img {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .our-benefit {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .vegeimg {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .benefit-text {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .our-star {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .vasv,
+  .wasv {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .our-feature {
+    width: 100%;
     height: auto;
   }
 
   .robin {
-    position: static;
-    margin-top: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .our-product {
+    width: 100%;
+    height: auto;
+  }
+
+  .again {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .pro-hd {
+    width: 100%;
+    text-align: center;
+  }
+
+  .fot {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Mobile view (up to 600px width) */
+@media (max-width: 600px) {
+  .navbar {
+    position: relative;
+  }
+
+  .hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+
+  .nev-menu {
+    display: none; /* hide by default */
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 8px;
+    padding: 15px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nev-menu.show {
+    display: flex;
+  }
+
+  .nev-menu li {
+    text-align: center;
+    padding: 10px 0;
   }
 
   .hero-left h1 {
-    font-size: 2rem;
-    width: auto;
+    font-size: 2.2rem;
+    width: 100%;
     height: auto;
   }
 
-  .highlight-text {
-    font-size: 2rem;
-    width: auto;
+  .hero-left p {
+    width: 100%;
     height: auto;
+  }
+
+  .brand-group-img {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .robin {
+    grid-template-columns: 1fr;
+  }
+
+  .features-group-img {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+  }
+
+  .author {
+    font-size: 14px;
   }
 }
-@media (max-width: 500px) {
-  .hero-btn img {
-    width: 150px;
-    height: auto;
-  }
 
-  .brand img {
-    width: 90%;
-  }
-
-  .benefit-list {
-    padding: 1rem;
-  }
-}
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN END */
+/* ========================= */
